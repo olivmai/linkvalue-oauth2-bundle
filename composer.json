@@ -1,0 +1,27 @@
+{
+    "name": "olivmai/linkvalue-oauth2-bundle",
+    "description": "Linkvalue OAuth 2.0 Client Provider for authentication through LV Connect",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Olivier Mairet",
+            "email": "oliviermairet@gmail.com",
+            "homepage": "https://github.com/olivmai"
+        }
+    ],
+    "keywords": [
+        "oauth",
+        "oauth2",
+        "client",
+        "authorization",
+        "authentication",
+        "linkvalue"
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "symfony/http-client": "^4.3"
+    },
+    "autoload": {
+        "psr-4": { "Olivmai\\LinkvalueOAuth2Bundle\\": "src/" }
+    }
+}

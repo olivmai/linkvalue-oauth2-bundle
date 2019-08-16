@@ -20,7 +20,7 @@ return [
 ```
 
 ### Add Configuration file
-Create a configuration file named linkvalue_oauth2.yaml in the config/packeges directory and then fill it with the following :
+Create a configuration file named linkvalue_oauth2.yaml in the config/packages directory and then fill it with the following :
 
 ```yaml
 # config/packeges/linkvalue_oauth2.yaml
@@ -115,7 +115,6 @@ LinkvalueUser :
 ## Credits
 
 - [Olivier Mairet](https://github.com/olivmai)
-
 
 ## License
 

@@ -3,19 +3,16 @@
 namespace Olivmai\LinkvalueOAuth2Bundle\Security\User;
 
 use Symfony\Component\Security\Core\Exception\UnsupportedUserException;
-use Symfony\Component\Security\Core\Security;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 
 class LinkvalueUserProvider implements UserProviderInterface
 {
     private $roles;
-    private $security;
 
-    public function __construct(Security $security, array $roles = ['ROLE_USER'])
+    public function __construct(array $roles = ['ROLE_USER'])
     {
         $this->roles = $roles;
-        $this->security = $security;
     }
 
     public function loadUserByUsername($username)

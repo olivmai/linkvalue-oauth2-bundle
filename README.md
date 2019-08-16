@@ -1,4 +1,4 @@
-# Google Provider for OAuth 2.0 Client
+# LV Connect OAuth provider
 
 This package provides Linvalue OAuth 2.0 support for an authentication through [LV Connect](https://github.com/Linkvalue-Interne/LvConnect).
 

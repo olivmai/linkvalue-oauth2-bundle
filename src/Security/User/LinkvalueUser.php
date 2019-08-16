@@ -1,7 +1,8 @@
 <?php
 
-namespace Linkvalue\Oauth2Bundle\Security\User;
+namespace Olivmai\LinkvalueOAuth2Bundle\Security\User;
 
+use DateTime;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 class LinkvalueUser implements UserInterface

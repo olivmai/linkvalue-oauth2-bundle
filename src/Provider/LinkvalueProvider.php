@@ -2,9 +2,9 @@
 
 namespace Olivmai\LinkvalueOAuth2Bundle\Provider;
 
-use App\Oauth\Client\LinkvalueClient;
-use App\Oauth\Security\User\LinkvalueUser;
-use App\Oauth\Security\User\LinkvalueUserFactory;
+use Olivmai\LinkvalueOAuth2Bundle\Client\LinkvalueClient ;
+use Olivmai\LinkvalueOAuth2Bundle\Security\User\LinkvalueUser;
+use Olivmai\LinkvalueOAuth2Bundle\Security\User\LinkvalueUserFactory;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class LinkvalueProvider
@@ -25,7 +25,7 @@ class LinkvalueProvider
     private $redirectUri;
 
     /**
-     * @var array
+     * @var string
      */
     private $scopes;
 
@@ -39,7 +39,7 @@ class LinkvalueProvider
         string $clientId,
         string $clientSecret,
         string $redirectUri = null,
-        array $scopes = []
+        string $scopes = 'profile:get'
     ) {
         $this->clientId = $clientId;
         $this->clientSecret = $clientSecret;

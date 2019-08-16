@@ -16,7 +16,7 @@ class Configuration implements ConfigurationInterface
                 ->scalarNode('client_id')->end()
                 ->scalarNode('client_secret')->end()
                 ->scalarNode('redirect_uri')->end()
-                ->arrayNode('scopes')->end()
+                ->scalarNode('scopes')->end()
             ->end()
         ;
 

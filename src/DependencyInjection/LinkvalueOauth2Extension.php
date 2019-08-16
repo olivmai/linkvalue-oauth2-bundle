@@ -21,10 +21,10 @@ class LinkvalueOauth2Extension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
-        /*$definition = $container->getDefinition('linkvalue.oauth2.provider');
+        $definition = $container->getDefinition('linkvalue.oauth2.provider');
         $definition->replaceArgument(1, $config['client_id']);
         $definition->replaceArgument(2, $config['client_secret']);
         $definition->replaceArgument(3, $config['redirect_uri']);
-        $definition->replaceArgument(4, $config['scopes']);*/
+        $definition->replaceArgument(4, $config['scopes']);
     }
 }

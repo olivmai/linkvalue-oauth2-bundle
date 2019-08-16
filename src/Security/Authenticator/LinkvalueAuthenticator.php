@@ -1,9 +1,9 @@
 <?php
 
-namespace Linkvalue\Oauth2Bundle\Security;
+namespace Olivmai\LinkvalueOAuth2Bundle\Security\Authenticator;
 
-use App\Oauth\Provider\LinkvalueProvider;
-use App\Oauth\Security\User\LinkvalueUser;
+use Olivmai\LinkvalueOAuth2Bundle\Provider\LinkvalueProvider;
+use Olivmai\LinkvalueOAuth2Bundle\Security\User\LinkvalueUser;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;

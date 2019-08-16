@@ -5,15 +5,27 @@
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
 
     <services>
-        <service id="linkvalue.oauth2.client" class="Olivmai\LinkvalueOAuth2Bundle\Client\LinkvalueClient">
-            <argument key="$client" type="service" id="http_client"/>
-        </service>
+
         <service id="linkvalue.oauth2.provider" class="Olivmai\LinkvalueOAuth2Bundle\Provider\LinkvalueProvider">
-            <argument key="$linkvalueClient" type="service" id="linkvalue.oauth2.client"/>
+            <argument type="service" id="linkvalue.oauth2.client"/>
             <argument></argument> <!-- will be filled in with client_id dynamically -->
             <argument></argument> <!-- will be filled in with client_secret dynamically -->
             <argument></argument> <!-- will be filled in with redirect_uri dynamically -->
             <argument></argument> <!-- will be filled in with scopes dynamically -->
+        </service>
+        <service id="Olivmai\LinkvalueOAuth2Bundle\Provider\LinkvalueProvider" alias="linkvalue.oauth2.provider"></service>
+
+        <service id="linkvalue.oauth2.client" class="Olivmai\LinkvalueOAuth2Bundle\Client\LinkvalueClient">
+            <argument type="service" id="http_client"/>
+        </service>
+        <service id="Olivmai\LinkvalueOAuth2Bundle\Client\LinkvalueClient" alias="linkvalue.oauth2.client"></service>
+
+        <service id="Olivmai\LinkvalueOAuth2Bundle\Security\User\LinkvalueUserProvider">
+            <argument type="service" id="security.helper"></argument>
+        </service>
+        <service id="Olivmai\LinkvalueOAuth2Bundle\Security\Authenticator\LinkvalueAuthenticator">
+            <argument type="service" id="linkvalue.oauth2.provider"></argument>
+            <argument type="service" id="router.default"></argument>
         </service>
     </services>
 </container>

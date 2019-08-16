@@ -19,7 +19,8 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "symfony/http-client": "^4.3"
+        "symfony/http-client": "^4.3",
+        "symfony/security": "^4.3"
     },
     "autoload": {
         "psr-4": { "Olivmai\\LinkvalueOAuth2Bundle\\": "src/" }

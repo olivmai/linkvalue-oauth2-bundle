@@ -1,6 +1,6 @@
 <?php
 
-namespace Linkvalue\Oauth2Bundle\Security\User;
+namespace Olivmai\LinkvalueOAuth2Bundle\Security\User;
 
 use DateTime;
 
@@ -14,11 +14,13 @@ class LinkvalueUserFactory
         $user->setLastName($userInfo['lastName']);
         $user->setEmail($userInfo['email']);
         $user->setProfilePictureUrl($userInfo['profilePictureUrl']);
-        $user->setTags($userInfo['tags']);
+        if (key_exists('tags', $userInfo)) {
+            $user->setTags($userInfo['tags']);
+        }
         $user->setRoles(['ROLE_USER']);
-        $user->setCreatedAt(DateTime::createFromFormat("Y-m-d", substr($userInfo['createdAt'],0,10)));
-        $user->setId($userInfo['id']);
-        $user->setId($userInfo['id']);
+        if (key_exists('createdAt', $userInfo)) {
+            $user->setCreatedAt(DateTime::createFromFormat("Y-m-d", substr($userInfo['createdAt'],0,10)));
+        }
 
         return $user;
     }

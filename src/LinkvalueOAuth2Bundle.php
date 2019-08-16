@@ -2,7 +2,7 @@
 
 namespace Olivmai\LinkvalueOAuth2Bundle;
 
-use Linkvalue\Oauth2Bundle\DependencyInjection\LinkvalueOauth2Extension;
+use Olivmai\LinkvalueOAuth2Bundle\DependencyInjection\LinkvalueOauth2Extension;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class LinkvalueOAuth2Bundle extends Bundle

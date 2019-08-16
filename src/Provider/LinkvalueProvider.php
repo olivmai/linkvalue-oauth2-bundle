@@ -1,6 +1,6 @@
 <?php
 
-namespace Linkvalue\Oauth2Bundle\Provider;
+namespace Olivmai\LinkvalueOAuth2Bundle\Provider;
 
 use App\Oauth\Client\LinkvalueClient;
 use App\Oauth\Security\User\LinkvalueUser;

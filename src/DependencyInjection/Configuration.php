@@ -1,6 +1,6 @@
 <?php
 
-namespace Linkvalue\Oauth2Bundle\DependencyInjection;
+namespace Olivmai\LinkvalueOAuth2Bundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
@@ -13,10 +13,10 @@ class Configuration implements ConfigurationInterface
 
         $treeBuilder->getRootNode()
             ->children()
-                ->scalarNode('client_id')
-                ->scalarNode('client_secret')
-                ->scalarNode('redirect_uri')
-                ->arrayNode('scopes')
+                ->scalarNode('client_id')->end()
+                ->scalarNode('client_secret')->end()
+                ->scalarNode('redirect_uri')->end()
+                ->arrayNode('scopes')->end()
             ->end()
         ;
 

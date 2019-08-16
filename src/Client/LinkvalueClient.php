@@ -1,6 +1,6 @@
 <?php
 
-namespace Linkvalue\Oauth2Bundle\Client;
+namespace Olivmai\LinkvalueOAuth2Bundle\Client;
 
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Contracts\HttpClient\HttpClientInterface;

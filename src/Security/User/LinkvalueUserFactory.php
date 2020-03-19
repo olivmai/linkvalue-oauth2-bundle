@@ -19,7 +19,7 @@ class LinkvalueUserFactory
         }
         $user->setRoles(['ROLE_USER']);
         if (key_exists('createdAt', $userInfo)) {
-            $user->setCreatedAt(DateTime::createFromFormat("Y-m-d", substr($userInfo['createdAt'],0,10)));
+            $user->setCreatedAt(DateTime::createFromFormat("Y-m-d", substr($userInfo['createdAt'], 0, 10)));
         }
 
         return $user;

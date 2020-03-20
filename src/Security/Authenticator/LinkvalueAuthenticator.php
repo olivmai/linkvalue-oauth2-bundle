@@ -78,7 +78,7 @@ class LinkvalueAuthenticator extends AbstractGuardAuthenticator
      * @throws AuthenticationException
      *
      */
-    public function getUser($credentials, UserProviderInterface $userProvider)
+    public function getUser($credentials, UserProviderInterface $provider)
     {
         return $this->linkvalueProvider->fetchUser($credentials);
     }

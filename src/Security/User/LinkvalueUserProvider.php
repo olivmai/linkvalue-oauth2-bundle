@@ -8,13 +8,6 @@ use Symfony\Component\Security\Core\User\UserProviderInterface;
 
 class LinkvalueUserProvider implements UserProviderInterface
 {
-    private $roles;
-
-    public function __construct(array $roles = ['ROLE_USER'])
-    {
-        $this->roles = $roles;
-    }
-
     public function loadUserByUsername($username)
     {
         $user = new LinkvalueUser();
@@ -28,7 +21,8 @@ class LinkvalueUserProvider implements UserProviderInterface
         if (!$user instanceof LinkvalueUser) {
             throw new UnsupportedUserException(sprintf('Instances of "%s" are not supported.', get_class($user)));
         }
-        return $this->loadUserByUsername($user->getUsername());
+        
+        return $user;
     }
 
     public function supportsClass($class)

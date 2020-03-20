@@ -57,6 +57,16 @@ class LinkvalueUser implements UserInterface
      */
     private $job;
 
+    public function __construct()
+    {
+        $this->roles = ['ROLE_USER'];
+    }
+
+    public function __toString()
+    {
+        return $this->firstName . ' ' . $this->lastName;
+    }
+
     /**
      * @return string
      */

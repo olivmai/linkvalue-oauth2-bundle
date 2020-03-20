@@ -89,6 +89,10 @@ security:
             guard:
                 authenticators:
                     - Olivmai\LinkvalueOAuth2Bundle\Security\Authenticator\LinkvalueAuthenticator
+            provider: linkvalue_provider
+            logout:
+                path: app_logout
+                target: login
             
 ```
 
